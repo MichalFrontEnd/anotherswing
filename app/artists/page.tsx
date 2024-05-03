@@ -1,11 +1,4 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
-
-export default function HomePage() {
-  return (
-    <>
-      <Welcome />
-      <ColorSchemeToggle />
-    </>
-  );
+/* eslint-disable linebreak-style */
+export default function ArtistsPage(): JSX.Element {
+  return (<main><h1>Artists</h1></main>);
 }

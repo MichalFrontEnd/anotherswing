@@ -3,6 +3,7 @@ import '@mantine/core/styles.css';
 import React from 'react';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
+import Navbar from '@/components/Navbar/Navbar';
 
 export const metadata = {
   title: 'Another Swing Dance Festival',
@@ -20,7 +21,7 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme}><Navbar />{children}</MantineProvider>
       </body>
     </html>
   );

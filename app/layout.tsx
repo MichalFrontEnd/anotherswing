@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 import '@mantine/core/styles.css';
 import React from 'react';
-import { MantineProvider, ColorSchemeScript } from '@mantine/core';
+import { MantineProvider, ColorSchemeScript, Container } from '@mantine/core';
 import { theme } from '../theme';
 import Navbar from '@/components/Navbar/Navbar';
 
@@ -21,7 +21,12 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body>
-        <MantineProvider theme={theme}><Navbar />{children}</MantineProvider>
+        <MantineProvider theme={theme}>
+          <Container fluid size="xl">
+            <Navbar />
+            {children}
+          </Container>
+        </MantineProvider>
       </body>
     </html>
   );

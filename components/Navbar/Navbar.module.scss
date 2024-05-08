@@ -1,5 +1,5 @@
 .navbar {
- color: light-dark(var(--mantine-color-black), var(--mantine-color-white)); 
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   /* font-size: rem(100px);
   font-weight: 900;
   letter-spacing: rem(-2px);
@@ -11,7 +11,7 @@
   width: 100%;
   justify-content: flex-end;
   flex-wrap: nowrap;
-  
+
   &__link {
     color: hotpink;
   }

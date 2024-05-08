@@ -9,11 +9,11 @@ export default function Navbar() {
   const pages: string[] = ['about', 'artists', 'schedule', 'values', 'scholarship', 'registration'];
   const [active, setActive] = useState(0);
 
-  const handlePage = (e: React.MouseEvent, i:number) :void => {
+  const handlePage = (e: React.MouseEvent, i: number): void => {
     e.preventDefault();
     setActive(i);
-  }
-    return (
+  };
+  return (
     <nav className={classes.navbar}>
       <Flex gap="xs" justify="flex-end" align="center" direction="row" wrap="nowrap">
         {pages &&

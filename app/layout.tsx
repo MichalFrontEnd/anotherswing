@@ -3,7 +3,7 @@ import '@mantine/core/styles.css';
 import React from 'react';
 import { MantineProvider, ColorSchemeScript, Container } from '@mantine/core';
 import { theme } from '../theme';
-import Navbar from '@/components/Navbar/Navbar';
+import Navbar from '@/components/organisms/Navbar/Navbar';
 
 export const metadata = {
   title: 'Another Swing Dance Festival',

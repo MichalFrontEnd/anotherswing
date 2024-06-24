@@ -3,29 +3,31 @@
 import '@mantine/core/styles.css';
 import { NavLink, Flex } from '@mantine/core';
 import { useState } from 'react';
+import Link from 'next/link';
 import classes from './Navbar.module.scss';
 
 export default function Navbar() {
   const pages: string[] = ['about', 'artists', 'schedule', 'values', 'scholarship', 'registration'];
   const [active, setActive] = useState(0);
 
-  const handlePage = (e: React.MouseEvent, i: number): void => {
-    e.preventDefault();
+  const handlePage = (i: number): void => {
     setActive(i);
   };
+
   return (
     <nav className={classes.navbar}>
       <Flex gap="xs" justify="flex-end" align="center" direction="row" wrap="nowrap">
-        {pages &&
-          pages.map((page: string, i: number) => (
+        {pages.map((page: string, i: number) => (
+          <Link href={`/${page}`} key={i} passHref>
             <NavLink
-              href={`/${page}`}
-              key={i}
+              component="a"
               active={i === active}
               label={page.toUpperCase()}
-              onClick={(e): void => handlePage(e, i)}
+              onClick={() => handlePage(i)}
+              className={classes.navbar__link}
             />
-          ))}
+          </Link>
+        ))}
       </Flex>
     </nav>
   );
